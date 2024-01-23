@@ -475,7 +475,7 @@ class GLWidget : public QOpenGLWidget, public QOpenGLFunctions {
         glBindBuffer(GL_ARRAY_BUFFER, edge_vbo.id_);
         glVertexAttribPointer(vertex_location_, 2, GL_FLOAT, GL_FALSE, 0, nullptr);
         glEnableVertexAttribArray(vertex_location_);
-        glDrawArrays(GL_LINES, 0, (GLsizei)edge_vbo.vertex_count_);
+        glDrawArrays(GL_LINE_STRIP, 0, (GLsizei)edge_vbo.vertex_count_);
         glDisableVertexAttribArray(vertex_location_);
     }
   }
